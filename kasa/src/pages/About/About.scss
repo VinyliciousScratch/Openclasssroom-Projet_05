@@ -1,0 +1,16 @@
+
+
+.aboutbody{
+    display: flex;
+    min-height: 100vh;
+
+    img{
+        height: 223px;
+        object-fit: cover;
+        width: 100%;
+        margin: 0 auto;
+        border-radius: 25px;
+        max-width: 1240px;
+        filter: brightness(0.7); // baisse la luminosité
+    }
+}

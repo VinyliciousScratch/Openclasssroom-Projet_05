@@ -1,0 +1,24 @@
+$bg-color: black ;
+
+
+
+.footer{
+    background: $bg-color;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    height: 209px;
+    img{
+        align-self: center;
+        filter: brightness(0) invert(1);
+        padding: 16px;
+        height: 40px;
+        width: 122px;
+    }
+
+    p{
+        color: white;
+        padding: 16px;
+
+    }
+}

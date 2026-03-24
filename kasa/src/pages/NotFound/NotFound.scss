@@ -1,0 +1,30 @@
+$text-color : #FF6060;
+$link-color : black;
+
+.notfoundbody{
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    
+    h1{
+        color: $text-color;
+        font-size: 288px;
+        padding: 200px  0 100px 0;
+
+    }
+    p{
+        color: $text-color;
+        font-size: 36px;
+        padding: 200px;
+
+    }
+
+    a{
+        color: $link-color;
+        font-size: 18px;
+       // text-decoration: none;
+       // &:hover{
+       //     text-decoration: underline;
+       // }
+    }
+}
