@@ -11,7 +11,7 @@ function AppRouter() {
             <Header />
             <Routes>
                 <Route path = "/" element ={<Home />} />
-                <Route path = "/housing-form" element ={<Housingform />} />
+                <Route path = "/housing-form/:id" element ={<Housingform />} />
                 <Route path = "/about" element ={<About />} />
                 <Route path = "*" element ={<NotFound />} />
             </Routes>

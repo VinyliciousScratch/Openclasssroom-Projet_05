@@ -1,17 +1,17 @@
-
+import { Link } from "react-router-dom";
 import './Home.scss'
 import source_img from '../../images/source/Image_source_1.png';
 import gallery_data from '../../../recent_homes.json';
 
 
-function Card({imgSrc, title}) { //rajouter "link" en variable d'entrée quand il y aura besoin du lien et remplacer href="#" par href={link}
+function Card({imgSrc, title , houseid}) { 
   return (
-    <a href="#" className="card">
+    <Link to={`/housing-form/${houseid}`} className="card">
       <article>
         <img src={imgSrc} alt={title} />
         <p>{title}</p>
       </article>
-    </a>
+    </Link>
   );
 }
 
@@ -24,7 +24,7 @@ function Gallerycard(){
           key={card.id}
           imgSrc={card.cover}
           title={card.title}
-          //link={card.link}
+          houseid={card.id}
         />
       ))}
     </div>
