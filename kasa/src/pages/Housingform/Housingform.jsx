@@ -4,7 +4,7 @@ import allhouses from '../../../recent_homes.json';
 
 import './Housingform.scss'
 
-
+/////////////////////////////////////////////////////////////CAROUSEL////////////////////////////////////////////////////////////////
 
 function CarouselImg({src,alt}){
   return(
@@ -13,39 +13,58 @@ function CarouselImg({src,alt}){
   )
 }
 
-
+ 
 function Carousel({pictures}){
-  console.log(pictures)
-  return( 
-  <div className= 'carousel'>
-    {pictures.map((img,index) => (
-      <CarouselImg 
-      key = {index} src ={img} alt ={img}
-      />  
-    ))} 
-  </div>)
-}
 
-
-function Nextbutton(images){
-
-    const[index, setIndex] = useState(0);
+    const[index, setIndex] = useState(0);                              //Numero de l'image 
+    console.log(index);
   
   const nextbuttonclick = () => {
-    setIndex((prevIndex) => (prevIndex + 1) % images.length);
+    if (index === pictures.length - 1) {                                  //Si + que le nombre d'images on revien à 0
+      setIndex(0);}
+    else{
+      setIndex(index +1);
+    };
+    
   };
 
   const prevbuttonclick = () => {
-    setIndex((prevIndex) => (prevIndex - 1) % images.length);
+    if (index === 0 ) {
+      setIndex(pictures.length- 1);}          
+    else{
+     setIndex(index - 1); 
+    };
+    
   };
 
+  useEffect(() => {
+    console.log("Index mis à jour :", index);
+  }, [index]);
+
+  return( 
+  <section className='section_carousel_container'>
+    <div className= 'carousel'>
+        <CarouselImg 
+        src ={pictures[index]} alt ={pictures[index]}
+        />  
+    </div>
+    <div>
+      <Nextbutton onClick = {prevbuttonclick} className = 'buttonNext buttonNext--buttonprev'/>
+      <Nextbutton onClick = {nextbuttonclick}className = 'buttonNext'/>
+    </div>
+  </section>)
+}
+
+
+function Nextbutton({onClick,className}){            //Transmet le click
   return(
-    <button><i className="fa-solid fa-chevron-up"></i></button>
+
+    <button onClick={onClick} className={className}><i className="fa-sharp fa-solid fa-angle-up"></i></button>
   )
 
 }
 
-
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 function Title({title,location}){                                   //Titre et localisation
 
@@ -121,61 +140,48 @@ function Houseformbutton({title,text}) {
   const[inputstate, setinputstate] = useState(false);
   const textcontainer = useRef(null);
 
+
   const buttonclick = () => {
     setinputstate(!inputstate);
   };
 
-  useEffect(() => {
-    const text = textcontainer.current;
-    const padding = parseInt(window.getComputedStyle(document.documentElement).getPropertyValue("--padding-text"));
-   
-
-    if (inputstate){
-      text.style.height = text.scrollHeight + (padding*2) +"px";
-    }
-    else{
-      text.style.height = "0px";
-
-    }
-
-
-
-  },[inputstate]);
-
   return(
-    <div>
-      <div className='container_btn'>
+    <div className='container'>
+      <div className = 'container_btn'>
         <h2>{title}</h2>
         <button className={inputstate ? 'button__on' : ''} onClick={buttonclick}><i className="fa-solid fa-chevron-up"></i></button>
       </div>
-      <p ref ={textcontainer} className={inputstate ? 'show' : ''}>{text}</p>
+      <p ref ={textcontainer} className={`${inputstate ? 'show' : ''} ${title === 'Équipements' ? 'equipements' : ''}`}>{text}</p>
     </div>
   );
 }
 
 
-function Listbutton({description,equipments}){
-
-  const Buttontextandtitle = [
-    { title: "Description", text: description },
-    { title: "Équipements", text: equipments }
-  ];
-
-
+function Descriptionbutton({description}){
+    const title = 'Description'
   return(
-    <div className='desc_container_section_3'>
-      {Buttontextandtitle.map((btn, index) =>(
+    
         <Houseformbutton 
-          key={`tag-${index}`}
-          title={btn.title}
-          text={btn.text}
+          title={title}
+          text={description}
         />
-      ))}
-    </div>
+    
   )
 }
 
+function Equipementbutton({equipments}){
+    const title = 'Équipements'
 
+    const textmodify = equipments.join("\n"); //ajoute les retours à la ligne
+
+  return(
+        <Houseformbutton 
+          title={title}
+          text={textmodify}
+        />
+    
+  )
+}
 
 //////////////////////////////////////////////////////////////////
 
@@ -195,7 +201,10 @@ function Housingform() {
         <Tags tags={data.tags}/>
         <Rating rating={data.rating}></Rating>
       </section>
-      <Listbutton description={data.description} equipments={data.equipments}/>
+      <section className='desc_container_section_3'>
+        <Descriptionbutton description = {data.description}/>
+        <Equipementbutton equipments = {data.equipments}/>
+      </section>
     </main>
   )
 }

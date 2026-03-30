@@ -15,23 +15,6 @@ function Aboutbutton({title,text}) {
     setinputstate(!inputstate);
   };
 
-  useEffect(() => {
-    const text = textcontainer.current;
-    const padding = parseInt(window.getComputedStyle(document.documentElement).getPropertyValue("--padding-text"));
-   
-
-    if (inputstate){
-      text.style.height = text.scrollHeight + (padding*2) +"px";
-    }
-    else{
-      text.style.height = "0px";
-
-    }
-
-
-
-  },[inputstate]);
-
   return(
     <div>
       <div className='container_btn'>
