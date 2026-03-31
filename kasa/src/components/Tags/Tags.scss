@@ -1,0 +1,18 @@
+$elements_color : #FF6060;
+
+
+.container_tag_box{
+    display: flex;
+    gap: 10px;
+    .tag_box{
+        background-color: $elements_color;
+        border-radius: 10px;
+        font-size: 14px;
+        color: white;
+        display: inline-block;
+        min-width: 115px;
+        padding: 0 10px;
+        text-align: center;
+        font-weight: bold;
+    }
+}

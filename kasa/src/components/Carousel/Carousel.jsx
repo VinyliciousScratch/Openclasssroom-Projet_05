@@ -1,0 +1,44 @@
+import { useState, useEffect} from 'react';
+import './Carousel.scss'
+import Nextbutton from '../Nextbutton/Nextbutton.jsx';
+ 
+function Carousel({pictures}){
+
+    const[index, setIndex] = useState(0);                              //Numero de l'image 
+    console.log(index);
+  
+  const nextbuttonclick = () => {
+    if (index === pictures.length - 1) {                                  //Si + que le nombre d'images on revien à 0
+      setIndex(0);}
+    else{
+      setIndex(index +1);
+    };
+    
+  };
+
+  const prevbuttonclick = () => {
+    if (index === 0 ) {
+      setIndex(pictures.length- 1);}          
+    else{
+     setIndex(index - 1); 
+    };
+    
+  };
+
+  useEffect(() => {
+    console.log("Index mis à jour :", index);
+  }, [index]);
+
+  return( 
+  <section className='section_carousel_container'>
+    <div className= 'carousel'>
+        <img src ={pictures[index]} alt ={pictures[index]}/> 
+    </div>
+    <div>
+      <Nextbutton onClick = {prevbuttonclick} className = 'buttonNext buttonNext--buttonprev'/>
+      <Nextbutton onClick = {nextbuttonclick}className = 'buttonNext'/>
+    </div>
+  </section>)
+}
+
+export default Carousel;

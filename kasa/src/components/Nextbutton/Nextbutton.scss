@@ -1,0 +1,25 @@
+.buttonNext{
+    position: absolute;
+    top: 40%;
+    left: 92%;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+    height: auto;
+    width: auto;
+    font-size: 80px;
+    transform: rotate(90deg);
+    background: none;
+    padding: 0;
+    border: none;
+    cursor: pointer;
+
+    &:hover{
+        color: #E3E3E3;
+    }
+    
+}
+
+.buttonNext--buttonprev{
+    transform: rotate(-90deg);
+    left: 3%;
+}

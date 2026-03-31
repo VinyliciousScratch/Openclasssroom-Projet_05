@@ -1,0 +1,20 @@
+
+
+$bg-container-card-color : #F6F6F6;
+
+
+
+.container_cards{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px;
+    position: relative;
+    margin-bottom: 50px;
+    border-radius: 25px;
+    background-color: $bg-container-card-color;
+    padding-top: 45px;
+    padding-bottom: 45px;
+
+
+}    

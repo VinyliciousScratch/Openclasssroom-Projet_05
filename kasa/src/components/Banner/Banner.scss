@@ -1,0 +1,35 @@
+    
+    $text-color : white;
+
+    
+    .container_img{
+        position: relative;
+        margin-bottom: 50px;
+
+        img{
+            height: 223px;
+            object-fit: cover;
+            width: 100%;
+            border-radius: 25px;
+            border:1px solid black;
+            filter: brightness(0.4); // baisse la luminosité
+            display: block;
+            
+        }
+
+        h1{
+            color: $text-color;
+            position: absolute;     
+            top: 50%;               
+            left: 50%;              
+            transform: translate(-50%, -50%); 
+            margin: 0;
+            text-align: center;
+            font-weight: bold;
+
+            font-size: clamp(24px, 5vw, 48px); 
+            max-width: 90%;                  
+            white-space: nowrap
+        }
+    
+    }

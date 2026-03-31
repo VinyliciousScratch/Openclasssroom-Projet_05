@@ -13,154 +13,19 @@ $elements_color : #FF6060;
     margin: 0 auto;
 
 
-    .section_carousel_container{
-
-        position: relative;
-        
-        .carousel{
-
-            margin: 0 auto;
-            max-width: 1240px;
-            width: 100%;
-            height: 415px;
-            overflow: hidden;
-            border-radius: 26px;
-    
-            img{
-                width: 100%;
-                height: 100%;
-                object-fit: cover;
-            }
-            
-        }
-
-
-        
-        .buttonNext{
-            position: absolute;
-            top: 40%;
-            left: 92%;
-            transform: translate(-50%, -50%);
-            z-index: 10;
-            height: auto;
-            width: auto;
-            font-size: 80px;
-            transform: rotate(90deg);
-            background: none;
-            padding: 0;
-            border: none;
-            cursor: pointer;
-
-            &:hover{
-                color: #E3E3E3;
-            }
-            
-        }
-
-        .buttonNext--buttonprev{
-            transform: rotate(-90deg);
-            left: 3%;
-        }
-
-    }
     .desc_container_section_1{
 
-        margin-top: 50px;
+        margin-top: 30px;
         display: flex;
         justify-content: space-between;
 
-        .Title_box{
-            display: flex;
-            flex-direction: column;
-            gap: 10px;
-            h1{
-                max-width: 750px;
-                width: 100%;
-                margin: 0;
-                padding: 0;
-                font-size: 36px;
-                color: $elements_color;
-                text-align: left;
-                white-space: normal;
-            }
-
-
-            p{
-                color: black;
-                text-align: left;
-
-            }
-
-        }
-    
-    
-    
-        .Host_container{
-            display: flex;
-
-            img{
-                border-radius: 64px;
-                height: 64px;
-                width: 64px;
-            }
-
-            P{
-                text-align: right;
-                white-space: pre-line;
-                color: $elements_color;
-                margin-right: 10px ;
-
-            }   
-        }
     }
-
-
-
-
 
     .desc_container_section_2{
         display: flex;
         justify-content: space-between;
         align-items: center;
-        margin-top: 30px;
-
-
-        .container_tag_box{
-            display: flex;
-            gap: 10px;
-            .tag_box{
-                background-color: $elements_color;
-                border-radius: 10px;
-                font-size: 14px;
-                color: white;
-                display: inline-block;
-                min-width: 115px;
-                padding: 0 10px;
-                text-align: center;
-                font-weight: bold;
-            }
-        }
-
-
-
-
-        .container_rating{
-            display: flex;
-            gap : 10px;
-
-            .star{
-                font-size: 24px;
-                color: #E3E3E3;
-            }
-
-            .star.active{
-                color: $elements_color;
-            }
-
-        }
-
-
-        
+        margin-top: 20px;      
     }
 
     
@@ -169,110 +34,6 @@ $elements_color : #FF6060;
         margin-top: 30px;
         justify-content: space-between;
         align-items: flex-start;
-        
-        .container{
-            display: flex;
-            justify-content: space-between;
-            flex-direction: column;
-            max-width: 582px;
-            width: 100%;
-            border-radius: 5px;
-
-
-
-            .container_btn{
-                display: flex;
-                justify-content: space-between;
-                max-width: 582px;
-                width: 100%;
-                height: 52px;
-                border-radius: 5px;
-
-                background: #FF6060;
-           
-           
-            
-                button{
-                    font-size: 24px;
-                    margin-right: 20px;
-                    background-color: transparent ;
-                    border: none;
-                    cursor: pointer;
-                    transition: rotate 0.5s;
-                }
-            
-                .button__on {
-                    rotate:-180deg;
-                }
-
-
-                h2{
-                    margin: 0 0 0 20px;
-                    font-weight: bold;
-                    align-self: center;
-                    color: white;
-
-                }
-        
-           
-           
-            }
-        
-        
-            p{
-                max-width: 582px;
-                width: 100%;
-                max-height: 0;
-                overflow: hidden;
-                background-color: #F6F6F673;
-                transition: max-height 1s ease, padding 1s ease , color 1s ease;
-                text-align: left;
-                color:rgba(0, 0, 0, 0);
-                margin:0 auto;
-                padding:0px;
-                box-sizing: border-box;
-                
-
-              
-
-                &.show{
-                    opacity: 1;
-                    max-height: 500px;
-                    margin: 0 auto;
-                    border-bottom-left-radius: 5px;
-                    border-bottom-right-radius: 5px;
-                    color: black;
-                    text-align: left;
-                    padding: 20px;
-                    box-sizing: border-box;
-                
-                }
-                
-
-                &.equipements{ 
-                    white-space: pre-line;
-                }
-
-
-
-            }   
-        
-        
-        
-        
-        
-        
-        
-        }
-    
-    
-    
-        
-    
-    
-    
-            
+        gap: 76px;
     }
-
-
 }
