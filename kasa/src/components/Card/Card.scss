@@ -58,4 +58,31 @@ $text-color : white;
             z-index: 1;
         }
     }
+
+
+    @media (max-width: 375px) {
+        height: 255px;
+        width: 335px;
+        margin: 0;
+
+        article{
+            p{
+            top : 184px;
+            left: 20px;  
+            }
+            
+        }
+
+
+
+    }
+
+
+
+
+
+
+
+
+
 }

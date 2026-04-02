@@ -20,7 +20,27 @@
         
     }
 
+    .btn_system{
+        
 
+        p{
+            position: absolute;
+            font-size: 18px;
+            color : white;
+            top: 357px;
+            left: 607px;
+            font-weight: 500;
+        
+        
+            &.hidden{
+                visibility: hidden;
+            }
+
+        }
+
+    
+    
+    }
     
 
 

@@ -21,4 +21,34 @@ $bg-color: black ;
         padding: 16px;
 
     }
+
+
+    @media (max-width: 375px) {
+        justify-content: center;
+        align-items: center;
+
+        
+        p{
+            color: white;
+            padding: 0px;
+            font-size: 12px;
+            max-width: 133px;
+            align-self: center;
+            line-height: 1.6;
+
+        }
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
 }

@@ -36,4 +36,12 @@ $elements_color : #FF6060;
         align-items: flex-start;
         gap: 76px;
     }
+
+    @media (max-width: 375px) {
+        margin: 0 auto;
+        padding: 0 10px;
+    }
+
+
+
 }

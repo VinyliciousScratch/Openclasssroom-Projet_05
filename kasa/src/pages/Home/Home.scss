@@ -11,5 +11,11 @@ $bg-card-color : #FF6060;
     max-width: 1240px;
     width: 100%;
     margin: 0 auto;
+    box-sizing: border-box;
 
+    @media (max-width: 375px) {
+        margin: 0 auto;
+        padding: 0 10px;
+    }
+        
 }   

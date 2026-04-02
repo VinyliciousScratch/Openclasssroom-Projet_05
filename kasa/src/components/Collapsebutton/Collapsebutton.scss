@@ -78,4 +78,49 @@
         }
 
     }
+
+
+
+    @media (max-width: 375px) {
+
+        .container_btn{
+            max-height: 30px;
+
+
+            button{
+                font-size: 16px;
+                margin-right: 4px;
+
+            }
+
+
+
+
+
+
+            h2{
+            font-size: 13px;
+            margin: 0 0 0 10px;
+
+
+            }
+  
+        }
+
+        p{
+            font-size: 12px;
+        }
+
+
+
+    }         
+
+
+
+
+
+
+
+
+
 }

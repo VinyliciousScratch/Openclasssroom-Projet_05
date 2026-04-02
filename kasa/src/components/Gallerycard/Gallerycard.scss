@@ -11,10 +11,19 @@ $bg-container-card-color : #F6F6F6;
     gap: 40px;
     position: relative;
     margin-bottom: 50px;
-    border-radius: 25px;
     background-color: $bg-container-card-color;
     padding-top: 45px;
     padding-bottom: 45px;
 
+
+
+
+    @media (max-width: 375px) {
+        background-color: transparent;
+        padding: 0;
+        margin-bottom: 27px;
+        gap: 22px;
+
+    }
 
 }    

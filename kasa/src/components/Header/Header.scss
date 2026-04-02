@@ -6,9 +6,17 @@ $bg-color: white ;
     height: 68px;
     width: 100%;
     max-width: 1240px;
-    margin: 0 auto;
+    min-width: 375px;
+    margin: 32px auto;
     justify-content: space-between;
-    padding: 32px 0;
+    
+
+
+    img{
+        max-width: 100%;
+        max-height: 100%;
+
+    }
 
     ul{
         display: flex;
@@ -33,4 +41,52 @@ $bg-color: white ;
         }
 
     }
+
+
+@media (max-width: 375px) {
+    max-width: 335px;
+    margin: 20px 10px;
+    
+
+    img{
+        max-width: 145px;
+        max-height: 47px;
+    }
+
+
+    ul{
+        gap: 26px;
+
+        li{
+            a{
+                font-size: 12px;                
+            }
+
+        }
+
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+  }
+
+
+
+
+
+
+
+
+
 }
+
