@@ -11,7 +11,7 @@ $elements_color : #FF6060;
     max-width: 1240px;
     width: 100%;
     margin: 0 auto;
-
+    box-sizing: border-box;
 
     .desc_container_section_1{
 
@@ -40,6 +40,39 @@ $elements_color : #FF6060;
     @media (max-width: 375px) {
         margin: 0 auto;
         padding: 0 10px;
+
+
+        .desc_container_section_2{
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: flex-start;     
+            align-items: flex-start;
+            gap: 20px;
+            margin-top: 10px;
+            width: 100%;   
+            
+            
+            .Host_container{
+                margin: 0 0 0 auto;
+                padding: 0;
+            }
+
+            .container_rating{
+                width: 40%;
+            }
+
+        }
+
+        .desc_container_section_3{
+            display: flex;
+            flex-direction: column;
+            gap: 20px;         
+            margin-top: 15px;
+
+        }
+
+        
     }
 
 

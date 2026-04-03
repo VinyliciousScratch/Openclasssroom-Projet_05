@@ -14,7 +14,7 @@ function Collapsebutton({title,text}) {
     <div className='collapsebutton'>
       <div className='container_btn'>
         <h2>{title}</h2>
-        <button className={inputstate ? 'button__on' : ''} onClick={buttonclick}><i className="fa-solid fa-chevron-up"></i></button>
+        <button className={inputstate ? 'button__on' : ''} onClick={buttonclick} aria-label="Bouton afficher"><i className="fa-solid fa-chevron-up"></i></button>
       </div>
       <p className={inputstate ? 'show' : ''}>{text}</p>
     </div>

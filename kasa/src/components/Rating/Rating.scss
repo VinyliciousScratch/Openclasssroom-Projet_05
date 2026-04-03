@@ -6,7 +6,7 @@ $elements_color : #FF6060;
     gap : 10px;
 
     .star{
-        font-size: 24px;
+        font-size: clamp(18px, 2vw, 24px);
         color: #E3E3E3;
     }
 
@@ -14,4 +14,13 @@ $elements_color : #FF6060;
         color: $elements_color;
     }
 
+
+
+
+    @media (max-width: 375px) {
+        gap: 5px;
+        .star{
+            font-size: 13px;
+        }
+    }
 }

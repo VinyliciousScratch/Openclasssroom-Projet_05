@@ -21,4 +21,33 @@ $elements_color : #FF6060;
         color: $elements_color;
         margin-right: 10px ;
     }   
+
+
+
+
+    @media (max-width: 375px) {
+        margin: 0 auto;
+        padding: 0 10px;
+    
+    
+        img{
+        border-radius: 64px;
+        height: 32px;
+        width: 32px;
+        }
+    
+        P{
+            font-size: 12px;
+            line-height: 1.4;
+        }   
+    
+    
+    
+    }
+
+
+
+
+
+
 }

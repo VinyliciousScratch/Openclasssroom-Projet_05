@@ -36,7 +36,7 @@ function Carousel({pictures}){
     </div>
     <div className= 'btn_system'>
       <Nextbutton onClick = {prevbuttonclick} className={`buttonNext buttonNext--buttonprev${pictures.length <= 1 ? ' buttonNext--hidden' : ''}`}/>
-      <p className={pictures.length <= 1 ? 'hidden' : ''}>{index}/{pictures.length}</p>
+      <p className={pictures.length <= 1 ? 'hidden' : ''}>{index + 1}/{pictures.length}</p>
       <Nextbutton onClick = {nextbuttonclick}className = {`buttonNext${pictures.length <= 1 ? ' buttonNext--hidden' : ''}`}/>
     </div>
   </section>)

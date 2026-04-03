@@ -3,16 +3,45 @@ $elements_color : #FF6060;
 
 .container_tag_box{
     display: flex;
+    flex-wrap: wrap;
     gap: 10px;
     .tag_box{
         background-color: $elements_color;
         border-radius: 10px;
         font-size: 14px;
         color: white;
-        display: inline-block;
-        min-width: 115px;
+        display: flex;
+        align-items: center; 
+        justify-content: center;
+        min-width: 95px;
         padding: 0 10px;
-        text-align: center;
         font-weight: bold;
+
     }
+
+
+    @media (max-width: 375px) {
+        
+        
+        
+        
+        .tag_box{
+            border-radius: 5px;
+            font-size: 10px;
+            min-width: 84px;
+            height:18px;
+        }
+    }
+
+
+
+
+
+
+
+
+
+
+
+
 }

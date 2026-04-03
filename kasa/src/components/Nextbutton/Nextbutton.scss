@@ -1,11 +1,5 @@
 .buttonNext{
-    position: absolute;
-    top: 40%;
-    left: 92%;
-    transform: translate(-50%, -50%);
     z-index: 10;
-    height: auto;
-    width: auto;
     font-size: 80px;
     transform: rotate(90deg);
     background: none;
@@ -21,9 +15,18 @@
 
 .buttonNext--buttonprev{
     transform: rotate(-90deg);
-    left: 3%;
 }
 
 .buttonNext--hidden{
     visibility: hidden;
+}
+
+
+@media (max-width: 375px) {
+    .buttonNext{
+    font-size: 20px;
+
+    }
+    
+
 }

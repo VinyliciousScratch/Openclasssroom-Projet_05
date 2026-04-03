@@ -26,7 +26,7 @@
 
         button{
             font-size: 24px;
-            margin-right: 20px;
+            margin-right: clamp(4px, 1vw, 20px);
             background-color: transparent ;
             border: none;
             cursor: pointer;
@@ -40,6 +40,7 @@
 
         h2{
             margin: 0 0 0 20px;
+            font-size: clamp(13px, 3vw, 24px);
             font-weight: bold;
             align-self: center;
             color: white;

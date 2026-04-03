@@ -6,27 +6,30 @@ $bg-color: white ;
     height: 68px;
     width: 100%;
     max-width: 1240px;
-    min-width: 375px;
     margin: 32px auto;
-    justify-content: space-between;
     
 
 
     img{
-        max-width: 100%;
-        max-height: 100%;
-
+        max-height: 68px;
+        width: clamp(145px, 30vw, 211px);;
+        height: 100%;
+        object-fit: contain;
+        margin-right: auto;
     }
 
     ul{
         display: flex;
         list-style: none;
-        gap: 57px;
+        gap: clamp(10px, 3vw, 57px);
+        padding: 0;    
+
 
         li{
+
             a{
                 color: black;
-                font-size: 24px;                
+                font-size: clamp(12px, 3vw, 24px);
                 font-weight: 500;
                 text-decoration: none;
 

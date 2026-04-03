@@ -21,14 +21,19 @@
     }
 
     .btn_system{
-        
+        position: absolute;
+        top: 50%;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        transform: translateY(-50%);
 
         p{
             position: absolute;
             font-size: 18px;
             color : white;
-            top: 357px;
-            left: 607px;
+            top: 194px;
+            left: 49%;                
             font-weight: 500;
         
         
@@ -37,11 +42,25 @@
             }
 
         }
-
-    
-    
     }
     
 
+    @media (max-width: 375px) {
+        max-width: 335px;
+    
+        .carousel{
+            height: 255px;
+        }
+    
+        .btn_system{
 
+
+            p{
+                visibility: hidden;
+
+            }
+        }
+    
+    
+    }
 }
