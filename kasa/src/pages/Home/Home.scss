@@ -1,20 +1,15 @@
 
 
-$bg-card-color : #FF6060;
-
-
 .homebody{
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-    position: relative;
     max-width: 1240px;
     width: 100%;
     margin: 0 auto;
     box-sizing: border-box;
 
     @media (max-width: 375px) {
-        margin: 0 auto;
         padding: 0 10px;
     }
         

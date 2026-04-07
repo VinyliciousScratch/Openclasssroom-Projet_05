@@ -1,5 +1,4 @@
 
-import { useState, useRef, useEffect} from 'react';
 import source_img from '../../images/source/Image_source_2.png';
 import './About.scss'
 import about_data from './About.json'

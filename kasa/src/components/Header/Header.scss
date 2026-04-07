@@ -1,5 +1,5 @@
 $bg-color: white ;
-
+$text-color: black;
 .header{
     display: flex;
     background: $bg-color;
@@ -12,7 +12,7 @@ $bg-color: white ;
 
     img{
         max-height: 68px;
-        width: clamp(145px, 30vw, 211px);;
+        width: clamp(145px, 30vw, 211px);
         height: 100%;
         object-fit: contain;
         margin-right: auto;
@@ -28,7 +28,7 @@ $bg-color: white ;
         li{
 
             a{
-                color: black;
+                color: $text-color;
                 font-size: clamp(12px, 3vw, 24px);
                 font-weight: 500;
                 text-decoration: none;
@@ -69,27 +69,7 @@ $bg-color: white ;
 
     }
 
-
-
-
-
-
-
-
-
-
-
-
-
   }
-
-
-
-
-
-
-
-
 
 }
 

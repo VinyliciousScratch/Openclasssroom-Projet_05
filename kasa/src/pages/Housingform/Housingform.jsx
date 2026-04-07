@@ -17,7 +17,7 @@ import './Housingform.scss';
 function Housingform() {
   const houseid = useParams();
   const data = allhouses.find(i => i.id === houseid.id)            //recupere dans le json les infos correspondantes à l'ID
-  const [isMobile, setIsMobile] = useState(window.innerWidth <= 375);
+  const [isMobile, setIsMobile] = useState(window.innerWidth <= 375); //vrai si en dessous de 375px
 
 //pour déplacer le HOST dans le container 3 en version mobile
   useEffect(() => {

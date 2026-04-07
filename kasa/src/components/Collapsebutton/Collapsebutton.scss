@@ -56,7 +56,6 @@
         transition: max-height 1s ease, padding 1s ease , color 1s ease;
         text-align: left;
         color:rgba(0, 0, 0, 0);
-        margin:0 auto;
         padding:0px;
         box-sizing: border-box;
         white-space: pre-line;  // respecte les retours à la ligne
@@ -94,20 +93,12 @@
 
             }
 
-
-
-
-
-
             h2{
             font-size: 13px;
             margin: 0 0 0 10px;
-
-
             }
-  
         }
-
+        
         p{
             font-size: 12px;
         }
