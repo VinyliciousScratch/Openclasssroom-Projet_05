@@ -4,11 +4,11 @@ import Nextbutton from '../Nextbutton/Nextbutton.jsx';
  
 function Carousel({pictures}){
 
-    const[index, setIndex] = useState(0);                              //Numero de l'image 
+    const[index, setIndex] = useState(0);                                               
     console.log(index);
   
   const nextbuttonclick = () => {
-    if (index === pictures.length - 1) {                                  //Si + que le nombre d'images on revien à 0
+    if (index === pictures.length - 1) {                                  
       setIndex(0);}
     else{
       setIndex(index +1);

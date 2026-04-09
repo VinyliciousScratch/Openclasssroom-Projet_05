@@ -16,23 +16,23 @@ import './Housingform.scss';
 
 function Housingform() {
   const houseid = useParams();
-  const data = allhouses.find(i => i.id === houseid.id)            //recupere dans le json les infos correspondantes à l'ID
-  const [isMobile, setIsMobile] = useState(window.innerWidth <= 375); //vrai si en dessous de 375px
+  const data = allhouses.find(i => i.id === houseid.id)                                             //recupere dans le json les infos correspondantes à l'ID
+  const [isMobile, setIsMobile] = useState(window.innerWidth <= 375);                               //vrai si en dessous de 375px
 
 //pour déplacer le HOST dans le container 3 en version mobile
   useEffect(() => {
-    const media = window.matchMedia("(max-width: 375px)");  //match media true si conditon ok par rapport à une condition basé sur du css
+    const media = window.matchMedia("(max-width: 375px)");                                          //match media true si condition ok par rapport à une condition basée sur du css
 
-    const listener = (i) => setIsMobile(i.matches);   //i info reçu- mat à jour is mobile avec la valeur i actuelle
+    const listener = (i) => setIsMobile(i.matches);                                                 //i info reçu- met à jour is mobile avec la valeur i actuelle
 
-    media.addEventListener("change", listener);  // a chaque changement appel listener
+    media.addEventListener("change", listener);                                                     // à chaque changement, appelez le listener
 
-    return () => media.removeEventListener("change", listener); //supprime pour eviter des appels inutile
+    return () => media.removeEventListener("change", listener);                                     //supprime pour éviter des appels inutiles
   }, []);
 
 
   if (!data) {
-    return <Navigate to="*" />;               //Navigate redirige vers URL
+    return <Navigate to="*" />;                                                                      //Navigate redirige vers URL Erreur
   }
 
   return (

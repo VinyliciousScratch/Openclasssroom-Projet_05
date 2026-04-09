@@ -4,9 +4,8 @@ import './Rating.scss';
 
 function Rating({rating}){
 
-  const stars = [1, 2, 3, 4, 5];                                  //Nb max etoiles
+  const stars = [1, 2, 3, 4, 5];                                  
 
-   //si star est inferieur ou égale ajouter la classe active  sinon  laisser classique  
   return (
     
     <div className="container_rating">
