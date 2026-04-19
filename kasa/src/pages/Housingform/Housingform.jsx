@@ -16,18 +16,18 @@ import './Housingform.scss';
 
 function Housingform() {
   const houseid = useParams();
-  const data = allhouses.find(i => i.id === houseid.id)                                             //recupere dans le json les infos correspondantes à l'ID
-  const [isMobile, setIsMobile] = useState(window.innerWidth <= 375);                               //vrai si en dessous de 375px
+  const data = allhouses.find(i => i.id === houseid.id)                                             
+  const [isMobile, setIsMobile] = useState(window.innerWidth <= 375);                               
 
 //pour déplacer le HOST dans le container 3 en version mobile
   useEffect(() => {
-    const media = window.matchMedia("(max-width: 375px)");                                          //match media true si condition ok par rapport à une condition basée sur du css
+    const media = window.matchMedia("(max-width: 375px)");                                          
 
-    const listener = (i) => setIsMobile(i.matches);                                                 //i info reçu- met à jour is mobile avec la valeur i actuelle
+    const listener = (i) => setIsMobile(i.matches);                                                 
 
-    media.addEventListener("change", listener);                                                     // à chaque changement, appelez le listener
+    media.addEventListener("change", listener);                                                     
 
-    return () => media.removeEventListener("change", listener);                                     //supprime pour éviter des appels inutiles
+    return () => media.removeEventListener("change", listener);                                     
   }, []);
 
 

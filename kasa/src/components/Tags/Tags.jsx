@@ -1,7 +1,7 @@
 import './Tags.scss';
 
 
-function Tags({tags}){                                   //Tags
+function Tags({tags}){                                   
   return (
     <div className='container_tag_box'>
       {tags.map((i , index) =>(
